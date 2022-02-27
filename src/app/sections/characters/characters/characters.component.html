@@ -1,0 +1,30 @@
+<div #apiMarvel class="scroll">
+    <nav class="p-4">
+      <div class="col-12 d-sm-flex justify-content-sm-between">
+        <div class="col-12 col-sm-6">
+          <h1>MARVEL</h1>
+        </div>
+        <div class="col-12 col-sm-6">
+          <label for="basic-url" class="form-label d-none d-sm-block d-md-block d-lg-block d-xl-block">Search</label>
+          <div class="input-group mb-3">
+            <!-- <span class="input-group-text" id="basic-addon3">https://example.com/users/</span> -->
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="character name">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section *ngIf="characters">
+        <div class="row justify-content-center">
+            <div class="card m-2 p-2" *ngFor="let character of charactersFilter" style="max-width: 18rem;">
+                <img class="card-img-top" src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}" />
+                <div class="card-body">
+                  <h5 class="card-title">{{ character.name | uppercase }}</h5>
+                  <p class="card-text">{{ character.description | slice:1:100 }}...</p>
+                  <p class="card-text"><small class="text-muted">Last updated {{ character.modified | date:'shortDate' }}</small></p>
+                </div>
+              </div>
+        </div>
+    </section>
+    <h1 class="small text-center m-4"><a href="#" class="m-4 link-secondary justify-content-center text-decoration-none">More</a></h1>
+    <footer class="p-4 d-flex justify-content-center"></footer>
+</div>

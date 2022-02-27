@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+html, body {
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+  overflow-y: hidden;
+}
+
+/***********************************************
+ *      CLASES QUE SE USAN PARA EL SCROLL      *
+ ***********************************************/
+
+ .scroll {
+    overflow-y: auto;
+    height: calc(100vh - 270px - 2rem) !important;
+    /*Estilos estándar experimentales (Principalmente Firefox)*/
+    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+    min-height: 100vh;
+}
+
+/** *******************************************************************************
+  * Estilos en el scroll para motores Webkit y blink (Chrome, Safari, Opera... )  *
+  *********************************************************************************/
+
+  .scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  .scroll::-webkit-scrollbar:vertical {
+    width:10px;
+  }
+
+  .scroll::-webkit-scrollbar:vertical:hover {
+    width:20px;
+  }
+  
+  .scroll::-webkit-scrollbar-button:increment,.scroll::-webkit-scrollbar-button {
+    display: none;
+  } 
+  
+  .scroll::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(72, 78, 94, 1);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    border-radius: 10px;  
+  }
+
+/******************************
+ * Fin stilos del scroll      *
+ ******************************/
