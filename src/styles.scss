@@ -16,7 +16,7 @@ html, body {
   -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
   -webkit-user-select: none; /* Chrome, Safari, and Opera */
   -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 /***********************************************
@@ -25,6 +25,7 @@ html, body {
 
  .scroll {
     overflow-y: auto;
+    overflow-x: hidden;
     height: calc(100vh - 270px - 2rem) !important;
     /*Estilos estándar experimentales (Principalmente Firefox)*/
     scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
